@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="log-path">/var/logs/springauth</Property>
+	</Properties>
+	<Appenders>
+		<RollingFile name="log_file" fileName="${log-path}/springauth.log"
+			filePattern="${log-path}/inscallback-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout>
+				<pattern>%d %-5p [%-18M] - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="500" />
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="springauth" level="debug" additivity="true">
+			<appender-ref ref="log_file" />			
+		</Logger>
+	</Loggers>
+</Configuration> 
