@@ -25,7 +25,8 @@ Respone Example:
 }
 ```
 5. Using the token in respone to add into header with Bearer type. I like using the Postman.
-6. Enjoy
+
+![main](https://raw.githubusercontent.com/manhtt23091992/springboot-jwt/master/postman_spring_jwt.PNG)
 
 #Note
 You can custom by yourself.
